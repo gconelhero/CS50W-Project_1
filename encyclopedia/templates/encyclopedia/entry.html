@@ -1,0 +1,38 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+
+{% block title %}
+
+    {% if entry %}
+        {{ title }}
+    {% else %}
+        Not Found
+    {% endif %}
+
+{% endblock %}
+
+{% block body %}
+
+{% if entry %}
+
+    <h1>{{ title }}</h1>
+        
+        <p>{{ entry|safe }}<p>
+    
+            <div class="button-place">
+                <a href="{% url 'encyclopedia:edit' title %}" class="btn btn-primary">Edit Entry</a>
+            </div>
+
+{% else %}
+
+<h1><div class="error-message">The page was not found</div></h1>
+<div class="button-place">
+    <a href="{% url 'encyclopedia:index' %}" class="btn btn-primary">Go to Index</a>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+

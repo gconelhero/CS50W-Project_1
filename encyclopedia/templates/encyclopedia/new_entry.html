@@ -1,0 +1,33 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    
+    {{ title }}
+
+{% endblock %}
+
+{% block body %}
+    
+    <h1>{{ title_h1 }}</h1>
+    
+    {% if error %}
+    
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+
+    {% endif %}
+
+    <form method="post">
+    {% csrf_token %}
+
+        {% for f in form %}
+            {{ f.label }}:<br>
+            {{ f }}<br>
+        
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" value="Create New Entry">
+    </form>
+
+{% endblock %}
+
