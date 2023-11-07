@@ -24,7 +24,6 @@ Once the entry is saved, the user should be redirected back to that entry’s pa
 * Challenge for those more comfortable: If you’re feeling more comfortable, try implementing the Markdown to HTML conversion without using any external libraries, supporting headings, boldface text, unordered lists, links, and paragraphs. You may find using regular expressions in Python helpful.
 
 Setup with Python 3.8.10
-
 ```
 python3 -m pip install Django==4.2.5 markdown2 &&
 git clone https://github.com/gconelhero/CS50W-Project_1 &&
