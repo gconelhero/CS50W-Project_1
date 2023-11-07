@@ -26,7 +26,7 @@ Once the entry is saved, the user should be redirected back to that entry’s pa
 Setup with Python 3.8.10
 
 ```
-python3 -m pip install Django==4.2.5 python-markdown2 &&
+python3 -m pip install Django==4.2.5 markdown2 &&
 git clone https://github.com/gconelhero/CS50W-Project_1 &&
 cd CS50W-Project_1 &&
 python3 manage.py makemigrations &&
